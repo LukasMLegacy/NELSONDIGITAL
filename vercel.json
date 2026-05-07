@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "nelsondigital.shop" }],
+      "destination": "/sites/nelsondigital/index.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.nelsondigital.shop" }],
+      "destination": "/sites/nelsondigital/index.html"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "nelsondigital.shop" }],
+      "destination": "/sites/nelsondigital/:path*"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.nelsondigital.shop" }],
+      "destination": "/sites/nelsondigital/:path*"
+    }
+  ]
+}

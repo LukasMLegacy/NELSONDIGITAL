@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Nelson Digital FZ LLC</title>
+  <meta name="description" content="Contact Nelson Digital FZ LLC for digital marketing consulting, SEO advisory, and growth partnerships in the United Arab Emirates.">
+  <link rel="canonical" href="https://nelsondigital.shop/contact.html">
+  <meta property="og:site_name" content="Nelson Digital FZ LLC">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nelsondigital.shop/contact.html">
+  <meta property="og:title" content="Contact | Nelson Digital FZ LLC">
+  <meta property="og:description" content="Contact Nelson Digital FZ LLC for digital marketing consulting, SEO advisory, and growth partnerships in the United Arab Emirates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nelson.css">
+</head>
+<body>
+  <div class="nd-blob" aria-hidden="true"></div>
+  <div class="nd-blob" aria-hidden="true"></div>
+  <div class="nd-bg" aria-hidden="true"></div>
+
+  <header class="nd-header">
+    <div class="nd-header-inner">
+      <a class="nd-logo" href="index.html">Nelson <span>Digital</span></a>
+      <nav class="nd-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="nd-main">
+    <div class="nd-wrap">
+      <header class="nd-hero compact">
+        <p class="nd-kicker">Contact</p>
+        <h1>Say <em>hello</em></h1>
+        <p class="nd-lead">
+          Share a short note about your company, what you sell, and what needs to improve online. We read every serious enquiry and reply with next steps, not an automated brochure.
+        </p>
+      </header>
+
+      <section class="nd-panel nd-split">
+        <div>
+          <h2>How we engage</h2>
+          <p>
+            Nelson Digital FZ LLC works with teams across industries when there is mutual respect for timelines and budgets. Commercial conversations stay confidential. Registry details and compliance paperwork flow through formal onboarding once both sides agree there is a fit.
+          </p>
+          <p style="font-weight: 700; color: var(--ink);">
+            No solicitation for unrelated products, please. We prioritise operators who already earn revenue and want help scaling responsibly.
+          </p>
+        </div>
+        <div>
+          <h2>Message us</h2>
+          <div id="form-area">
+            <form id="contact-form" class="nd-form" action="#" method="post">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <label for="company">Company or project</label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+              <label for="message">What should we know?</label>
+              <textarea id="message" name="message" required placeholder="Goals, timelines, links, anything useful."></textarea>
+              <button class="nd-btn nd-btn-primary" type="submit">Send message</button>
+            </form>
+          </div>
+          <div id="form-success" class="nd-form-success" hidden role="status" aria-live="polite">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Sent</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="nd-footer">
+    <div class="nd-footer-inner">
+      <div>
+        <div class="nd-footer-brand">Nelson Digital FZ LLC</div>
+        <p>Digital marketing and consulting. Based in the United Arab Emirates.</p>
+      </div>
+      <div class="nd-foot-links">
+        <strong>Site</strong>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nd-foot-copy">
+        <p>© Nelson Digital FZ LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var form = document.getElementById("contact-form");
+      var area = document.getElementById("form-area");
+      var ok = document.getElementById("form-success");
+      if (!form || !area || !ok) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        area.hidden = true;
+        ok.hidden = false;
+      });
+    })();
+  </script>
+</body>
+</html>

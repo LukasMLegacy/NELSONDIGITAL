@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Streamline Media FZ LLC</title>
+  <meta name="description" content="Contact Streamline Media FZ LLC in Ras Al Khaimah, United Arab Emirates. Commercial enquiries and office address.">
+  <link rel="canonical" href="https://streamlinemedia.shop/contact.html">
+  <meta property="og:site_name" content="Streamline Media FZ LLC">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://streamlinemedia.shop/contact.html">
+  <meta property="og:title" content="Contact | Streamline Media FZ LLC">
+  <meta property="og:description" content="Contact Streamline Media FZ LLC in Ras Al Khaimah, United Arab Emirates. Commercial enquiries and office address.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="index.html">Streamline <span>Media</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="wrap">
+      <header class="glass hero compact">
+        <p class="badge"><span class="dot" aria-hidden="true"></span> Enquiries</p>
+        <h1>Contact</h1>
+        <p class="lead">
+          We welcome professional correspondence about campaigns, media partnerships, and vendor relationships. Use the form for a first touch or write to our registered office.
+        </p>
+      </header>
+
+      <section class="glass panel contact-block">
+        <div>
+          <h2>Office</h2>
+          <p class="details">
+            <strong style="color: var(--text-soft); font-weight: 600;">Streamline Media FZ LLC</strong><br>
+            License VUNE2069<br>
+            Compass Building, Al Hulaila Industrial Zone FZ<br>
+            Ras Al Khaimah, United Arab Emirates
+          </p>
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+            Commercial enquiries only. We respond to messages that clearly describe your company, scope, and intent.
+          </p>
+        </div>
+        <div>
+          <h2>Send a message</h2>
+          <div id="form-area">
+            <form id="contact-form" class="form" action="#" method="post">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
+              <button class="btn" type="submit">Send enquiry</button>
+            </form>
+          </div>
+          <div id="form-success" class="form-success" hidden role="status" aria-live="polite">
+            <span class="form-success-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="form-success-text">Sent</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div>
+        <div class="footer-brand">Streamline Media FZ LLC</div>
+        <p class="footer-tagline">Digital advertising, search, and media services from the United Arab Emirates.</p>
+      </div>
+      <div class="footer-links">
+        <strong>Explore</strong>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© Streamline Media FZ LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var form = document.getElementById("contact-form");
+      var area = document.getElementById("form-area");
+      var ok = document.getElementById("form-success");
+      if (!form || !area || !ok) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        area.hidden = true;
+        ok.hidden = false;
+      });
+    })();
+  </script>
+</body>
+</html>
