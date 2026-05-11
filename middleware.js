@@ -1,5 +1,11 @@
 import { next, rewrite } from '@vercel/functions';
 
+/**
+ * Jedna Vercel deployment = dva weby podľa Host hlavičky:
+ *
+ * streamlinemedia.shop (+ www), *.vercel.app, preview URL → koreň repo (Streamline)
+ * nelsondigital.shop (+ www)                             → sites/nelsondigital/ (Nelson)
+ */
 const NELSON_HOSTS = new Set(['nelsondigital.shop', 'www.nelsondigital.shop']);
 
 export default function middleware(request) {
@@ -10,6 +16,10 @@ export default function middleware(request) {
 
   const base = '/sites/nelsondigital';
   let pathname = url.pathname;
+
+  if (pathname.startsWith('/.well-known')) {
+    return next();
+  }
   if (pathname.startsWith(`${base}/`) || pathname === base) {
     return next();
   }

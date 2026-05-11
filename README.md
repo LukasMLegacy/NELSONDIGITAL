@@ -21,11 +21,20 @@ python3 -m http.server 8080
 cd sites/nelsondigital && python3 -m http.server 8081
 ```
 
-## Vercel
+## Vercel (jeden projekt = dve domény)
 
-1. Importuj repozitár do Vercel (root directory = koreň repozitára).
-2. Pridaj domény: **streamlinemedia.shop** a **nelsondigital.shop** (a voliteľne `www`).
-3. Súbor `vercel.json` presmeruje host `nelsondigital.shop` do `sites/nelsondigital/`.
+Routing nie je vo `vercel.json`, ale v **`middleware.js`**: pri hoste `nelsondigital.shop` / `www.nelsondigital.shop` sa obsah interným rewrite nasmeruje do `sites/nelsondigital/`. Všetky ostatné hosty (vrátane **streamlinemedia.shop**) dostanú web z koreňa repozitára.
+
+1. Vytvor **jeden** Vercel projekt z tohto repozitára (**Root Directory** = koreň, kde je `middleware.js` a `package.json`).
+2. V **Settings → Domains** pripoj **obe** produkčné domény k tomu istému projektu, napr.:
+   - `streamlinemedia.shop` (+ voliteľne `www.streamlinemedia.shop`)
+   - `nelsondigital.shop` (+ voliteľne `www.nelsondigital.shop`)
+3. Každý deploy musí prebehnúť s **`npm install`** (kvôli závislosti `@vercel/functions` pre middleware). Štandardne Vercel pri `package.json` závislosti nainštaluje.
+4. Kontrola po nasadení:
+   - na doméne Streamline musí byť titulok stránky „Streamline Media …“,
+   - na doméne Nelson „Nelson Digital …“.
+
+Ak GitHub pri klone vráti **HTTP 500**, ide o výpadok GitHub/Vercel – skús **Redeploy** alebo po čase znova.
 
 ## GitHub organizácia `streamline`
 
