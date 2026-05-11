@@ -1,0 +1,7 @@
+{
+  "name": "nelsondigital-multisite",
+  "private": true,
+  "dependencies": {
+    "@vercel/functions": "^2.2.13"
+  }
+}
